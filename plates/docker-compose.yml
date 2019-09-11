@@ -1,0 +1,40 @@
+version: '3'
+services:
+############################################
+  plates:
+    container_name: 'plates-app'
+    restart: unless-stopped
+    build: .
+    ports:
+      - 8085:80
+    environment:
+      C_FORCE_ROOT: "true"
+    volumes:
+      - /plates/media:/plates/uploads
+      - /plates/logs:/plates/deploy/logs
+    working_dir: /plates
+    depends_on:
+      - db
+      - rabbitmq
+############################################
+  db:
+    container_name: 'plates-db'
+    image: postgres:9.6-alpine
+    restart: always
+    ports:
+      - 127.0.0.1:5732:5432
+    volumes:
+      - /plates/db/data:/var/lib/postgresql/data
+      - /plates/db/backup:/var/lib/postgresql/backup
+    environment:
+      POSTGRES_PASSWORD: plates
+      POSTGRES_USER: plates
+
+    working_dir: /var/lib/postgresql/data/
+
+############################################
+  rabbitmq:
+    container_name: 'plates-rabbitmq'
+    image: rabbitmq:3.6.14-management-alpine
+    restart: always
+############################################

@@ -1,0 +1,29 @@
+{
+	"id": 5,
+	"plates_number": "в555тс198rus",
+	"car_model": "Logan5",
+	"owners": [
+		{
+			"id": 7,
+			"first_name": "Helena",
+			"last_name": "Ivkina",
+			"middle_name": "N",
+			"document": {
+				"id": 15,
+				"id_type": "DL",
+				"value": "PV0004"
+			}
+		},
+		{
+			"id": 6,
+			"first_name": "Olena",
+			"last_name": "Ivkina",
+			"middle_name": "K",
+			"document": {
+				"id": 14,
+				"id_type": "PT",
+				"value": "96500004"
+			}
+		}
+	]
+}

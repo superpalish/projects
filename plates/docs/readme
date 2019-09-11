@@ -1,0 +1,15 @@
+API REQUEST EXAMPLES
+# list request
+curl -X GET http://localhost/api/v1/plates/?format=json
+# create request
+curl -X POST -H "Content-Type: application/json" -d @plates.json http://localhost/api/v1/plates/
+# delete request
+curl -X DELETE http://localhost/api/v1/plates/3/
+# update request
+curl -X PATCH -H "Content-Type: application/json" -d @update.json http://localhost/api/v1/plates/5/
+
+# celery start
+celery -A plates worker --loglevel=info
+
+# run tests
+docker exec -it plates-app python /plates/plates-project/manage.py test plates_app.tests

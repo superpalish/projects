@@ -1,0 +1,24 @@
+{
+	"plates_number": "в505тс78rus",
+	"car_model": "Altima",
+	"owners": [
+		{
+			"first_name": "Elena",
+			"last_name": "Ivkina",
+			"middle_name": "K",
+			"document": {
+				"id_type": "DL",
+				"value": "PV11171"
+			}
+		},
+		{
+			"first_name": "Alena",
+			"last_name": "Ivkina",
+			"middle_name": "K",
+			"document": {
+				"id_type": "PT",
+				"value": "100071"
+			}
+		}
+	]
+}

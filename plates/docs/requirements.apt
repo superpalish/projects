@@ -1,0 +1,11 @@
+build-essential
+python3.5
+postgresql-9.5
+postgresql-contrib-9.5
+postgresql-server-dev-9.5
+python3-lxml
+libxml2-dev
+libxslt-dev
+python-dev
+rabbitmq-server
+python3-pil
